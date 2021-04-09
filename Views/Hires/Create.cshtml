@@ -1,0 +1,55 @@
+﻿@model Hire_Professionals_Final_Project.Models.Hire
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Hire</h4>
+<hr />
+<h2>   Hello @Model.Client.Name  You have hired @Model.Professional.Name </h2>
+
+<h3> Details of the hired professional </h3>
+
+
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Professional.Name)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Professional.Name)
+    </dd>
+ 
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Professional.Mobile)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Professional.Mobile)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Professional.Skills)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Professional.Skills)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Professional.ExperienceInYears)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Professional.ExperienceInYears)
+    </dd>
+   
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Professional.HourlyRate)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Professional.HourlyRate)
+    </dd>
+</dl>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
